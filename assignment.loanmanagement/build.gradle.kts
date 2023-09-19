@@ -25,8 +25,20 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	developmentOnly("org.springframework.boot:spring-boot-docker-compose")
 	runtimeOnly("org.postgresql:postgresql")
+
+	//JUnit
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	testImplementation("org.mockito:mockito-core:3.12.4")
+
+	//logger
+	implementation("io.github.microutils:kotlin-logging-jvm:2.0.11")
+	implementation("ch.qos.logback:logback-classic:1.2.9")
+
+	//    for controller advice at filter stage
+	implementation("org.springframework.boot:spring-boot-starter-validation")
 }
+
+
 
 tasks.withType<KotlinCompile> {
 	kotlinOptions {
